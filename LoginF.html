@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shop" />
+    <style>
+        h1 {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        hr {
+            width: 60px; margin-left: 5px; margin-top: -10px;
+        }
+        .container {
+            display: flex;
+            justify-content:left;
+            align-items:flex-start;
+            padding-left: 10px; margin-top: 25px ;
+        }
+        input {
+            display: block;
+            margin: 3px; padding: 5px;
+            width:250px;
+        }
+        h5 {
+            text-align: end; margin: 0 auto;
+            cursor: pointer;
+        }
+        #Login {
+            width: 180px; font-size: 11px; border-color: black;
+            border-radius: 10px; color: rgb(255, 255, 255);
+            background-color: black; margin-left: 30px;
+            margin-top: 29px; padding: 5px 5px; cursor: pointer;
+        }
+        #log {
+            text-align: center; margin-top: 20px; margin-left: -18px;
+            text-decoration-line:overline;
+        }
+        .fa-google-plus-square {
+            color: rgb(220, 196, 11);
+        }
+        .fa-facebook-square {
+            color: #1877F2;
+        }
+        .fa-twitter-square {
+            color: #1DA1F2;
+        }
+        .icon { 
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            margin-top: 25px;
+            padding-right: 30px;
+        }
+        #last {
+            text-align: center; padding-right: 20px; margin-top: 13px;
+        }
+        #sub {
+            border: 1px solid;
+            border-radius: 10px;
+            background-color: black;
+            color: white; padding: 7px 7px; margin: 8px; 
+            display: flex;
+            justify-content: center;
+        }
+        input:invalid:not(:placeholder-shown) {
+            border-color: red;
+            background-image: url(IMAGE/red-checked.jpeg);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 7px);    
+        }
+        input:valid:not(:placeholder-shown) {
+            border-color: green;
+            background-image: url(IMAGE/checked2.jpeg);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 7px);
+        }
+        input:invalid:not(:placeholder-shown) + small {
+            color: red; visibility:visible
+        }
+        input:invalid ~ button[type="submit"] {
+            opacity: .6; pointer-events: none;
+        }
+        small {visibility: hidden;}
+
+    </style>
+</head>
+<body>
+    <h1>Login</h1> <hr>
+    <div class="container">
+        <form action="#" method="post">
+         <label for="Name">Username:</label>
+         <input type="text" id="name" required placeholder="John Ryan" pattern="^[a-zA-Z0-9]+$
+         "> <br>
+         <label for="Email">Email Address/Mobile Number</label>   
+         <input type="email" id="Email" placeholder="JohnRyan23@" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+         "> <br>
+         <label for="Password">Password</label>
+         <input type="password" id="Password" placeholder="QWERT!123" minlength="5"> 
+         <small>Password must be at least 6 characters</small>  
+         <h5>Forget Password?</h5>
+         <submit id="sub" type="submit">Login</submit>
+         <h5 id="log">or login with</h5>
+         <div class="icon">
+         <i class="fa fa-google-plus-square fa-2x" aria-hidden=""></i>
+         <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+         <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+         </div><br>
+         <h5 id="last">You don't have an account? <b>SIGN UP</B></h5>
+        </form>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
